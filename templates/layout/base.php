@@ -7,8 +7,6 @@
         <meta name="author" content="Serkin Alexander">
         <meta charset="utf-8">
 
-        <link rel="stylesheet" href="/css/styles.css?v=1.0">
-
         <style>
             table {
                 width: 100%;
@@ -16,11 +14,19 @@
             .header_links_block {
                 text-align: right;
             }
+            .post_block_date {
+                font-size: small;
+            }
+            .post_block_user {
+                text-decoration: underline;
+            }
+            .post_block_text {
+                line-height: 0.7cm;
+            }
         </style>
     </head>
 
     <body>
-        <script src="/js/scripts.js"></script>
 
         <header>
             <table>
@@ -47,7 +53,7 @@
 
         <footer>
             <hr>
-             github
+             <a href="https://github.com/serkin/blog" target="_blank">github</a>
         </footer>
     </body>
 </html>

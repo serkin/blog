@@ -1,7 +1,7 @@
 <?php echo (isset($error)) ? $error : ''; ?>
 
 <form action="/newpost/" method="post">
-    <?php if($session->isClientAuthorized()): ?>
+    <?php if ($session->isClientAuthorized()): ?>
     <fieldset>
         <legend>New post</legend>
         <div>

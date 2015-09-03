@@ -1,4 +1,4 @@
-<?php foreach($posts as $post): ?>
+<?php foreach ($posts as $post): ?>
 
 
     <div class="post_block_title">

@@ -15,7 +15,7 @@
 
 
 <div class="post_block_text">
-    <?php echo $post->getText(); ?>
+    <?php echo nl2br($post->getText()); ?>
 </div>
 
 
@@ -34,17 +34,21 @@
     </fieldset>
 </form>
 
-<?php foreach($post->getComments() as $comment): ?>
+<?php foreach ($post->getComments() as $comment): ?>
 
     <hr>
-
-    <?php if($comment->getUser()): ?>
-        <?php echo $comment->getUser()->getLogin(); ?>
-    <?php else: ?>
-        noname
-    <?php endif; ?>
-    <?php echo $comment->getDate(); ?>
-    <?php echo $comment->getComment(); ?>
+    <div class="post_block_user">
+        <?php if ($comment->getUser()): ?>
+            <?php echo $comment->getUser()->getLogin(); ?>
+        <?php else: ?>
+            noname
+        <?php endif; ?>
+    </div>
+    <div class="post_block_date">
+        <?php echo $comment->getDate(); ?>
+    </div>
+    <div class="post_block_text">
+        <?php echo $comment->getComment(); ?>
+    </div>
 
 <?php endforeach; ?>
-
